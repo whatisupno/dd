@@ -27,7 +27,7 @@ public class ListProductsEndpoint(IConfiguration config)
                    Name,
                    ListPrice
             FROM   Production.Product
-            ORDER  BY Name
+            ORDER  BY ListPrice
             """);
 
         await Send.OkAsync(rows.ToList(), cancellation: ct);
